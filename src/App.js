@@ -4,31 +4,26 @@ import Messages from './components/Messages';
 import Input from './components/Input';
 
 function randomName() {
-  const adjectives = [
+  const first_names = [
     "Bobo", "Dozo", "Damir", "Kornilije", "Margo", "Ragnar", "Obama", "Teemo",
     "John", "Cxaxukluth", "Yog-Sothoth", "Davor", "Vojko", "Ronald", "Vladimir", "Joinko",
     "Jozo", "Suiiiii", "Vrhovni General", "Geralt", "Kocka", "Jusef", "Labudije", "Zoos"
   ];
-  const nouns = [
+  const last_names = [
     "Dodo", "Bono", "Skoljikević", "Kornilijus", "Butter", "Ok", "Obama", "Sotona",
     "Johnson", "The Ancient One", "Skelić", "V", "McDonald", "Vlado", "Boinko",
     "Bozo", "II", "Tito", "Of Rivia", "Labud", "Poporko", " Gospodar Vremena"
   ];
-  const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-  const noun = nouns[Math.floor(Math.random() * nouns.length)];
-  return adjective + " " + noun;
+  const first_name = first_names[Math.floor(Math.random() * first_names.length)];
+  const last_name = last_names[Math.floor(Math.random() * last_names.length)];
+  return first_name + " " + last_name;
 }
-
-function randomColor() {
-  return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
-} 
 
 class App extends Component {
   state = {
     messages: [],
     member: {
       username: randomName(),
-      color: randomColor(),
     }
   }
 
